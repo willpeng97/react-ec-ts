@@ -7,6 +7,8 @@ import { Home } from './pages/Home';
 import { Products } from './pages/Products';
 import { Cart } from './pages/Cart';
 import { Profile } from './pages/Profile';
+import tiles from './mockData/menuTiles.json'
+
 
 export const App = () => {
   return (
@@ -17,7 +19,7 @@ export const App = () => {
         {/* 分頁內容 */}
         <main style={{ padding: '20px'}}>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home tiles={tiles}/>} />
             <Route path="/products" element={<Products />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/profile" element={<Profile />} />
