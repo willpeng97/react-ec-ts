@@ -8,7 +8,7 @@ import { Products } from './pages/Products';
 import { Cart } from './pages/Cart';
 import { Profile } from './pages/Profile';
 
-function App() {
+export const App = () => {
   return (
     <Router>
       <div>
@@ -29,6 +29,4 @@ function App() {
       </div>
     </Router>
   );
-}
-
-export default App;
+};
