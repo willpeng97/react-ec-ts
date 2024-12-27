@@ -15,7 +15,7 @@ export const App = () => {
         {/* 固定導航欄 */}
         <Navbar />
         {/* 分頁內容 */}
-        <main style={{ padding: '20px', minHeight: '80vh' }}>
+        <main style={{ padding: '20px'}}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
