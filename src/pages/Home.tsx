@@ -1,4 +1,4 @@
-import { MenuTile } from "../components/MenuTile";
+import { MenuTile } from "../components/MenuTile/MenuTile";
 
 const MenuTiles = [
   {

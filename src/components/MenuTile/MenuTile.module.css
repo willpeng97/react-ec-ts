@@ -13,7 +13,7 @@
 }
 
 /* 變色效果 */
-.hover-effect {
+.hoverEffect {
   transition: background-color 0.3s ease, color 0.3s ease;
 
   &:hover {
