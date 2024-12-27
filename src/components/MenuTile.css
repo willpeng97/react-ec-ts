@@ -1,0 +1,26 @@
+.btnItem {
+  background-color: #eee;
+  & h3 {
+    color: #05356C;
+  }
+}
+
+.cover {
+  height: auto;
+  max-height: 10rem;
+  margin-bottom: 1rem;
+  max-width: 95%;
+}
+
+/* 變色效果 */
+.hover-effect {
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: #05356c;
+
+    h3 {
+      color: white;
+    }
+  }
+}
