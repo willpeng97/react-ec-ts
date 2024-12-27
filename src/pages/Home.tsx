@@ -1,6 +1,5 @@
 import { FC } from "react";
 import { MenuTile, Props as TileProps } from "../components/MenuTile/MenuTile";
-import menuTiles from './mockData/menuTiles.json'
 
 export type Tile = TileProps;
 
