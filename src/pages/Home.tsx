@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { MenuTile, Props as TileProps } from "../components/MenuTile/MenuTile";
+import { MenuTile, Props as TileProps } from "../components/MenuTile";
 
 export type Tile = TileProps;
 

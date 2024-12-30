@@ -1,10 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faEyeSlash,
-  
-} from '@fortawesome/free-solid-svg-icons';
+import { faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from "react-router-dom";
 
 export const LoginForm = () => {
+  const navigate = useNavigate();
+  const handleLoginClick = () => {
+    navigate('/');
+  };
+
   return (
     <div
       style={{
@@ -52,22 +55,23 @@ export const LoginForm = () => {
               </div>
               
               <div className="d-flex px-1 pt-1">
-                <p className="infoBtn" data-bs-toggle="modal" data-bs-target="#forgetPwdModal">忘記密碼?</p>
-                <p className="ms-3 infoBtn" data-bs-toggle="modal" data-bs-target="#contactModal">聯絡我們</p>
+                <p className="text-white opacity-75" style={{cursor:"pointer"}} data-bs-toggle="modal" data-bs-target="#forgetPwdModal">忘記密碼?</p>
+                <p className="ms-3 text-white opacity-75" style={{cursor:"pointer"}} data-bs-toggle="modal" data-bs-target="#contactModal">聯絡我們</p>
               </div>
 
               <button
                 type="button"
                 className="w-100 btn btn-lg btn-primary mb-3"
                 id="login"
+                onClick={handleLoginClick}
               >
                 Login
               </button>
             </form>
             <div className="mt-3 text-center">
-              <small className="text-info text-opacity-50"
-                >© COPYRIGHT – WEYU TECHNOLOGY CO.,LTD.</small
-              >
+              <small className="text-info text-opacity-50">
+                © COPYRIGHT – WEYU TECHNOLOGY CO.,LTD.
+              </small>
             </div>
           </div>
         </div>

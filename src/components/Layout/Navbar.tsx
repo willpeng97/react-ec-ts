@@ -62,11 +62,11 @@ export const Navbar = () => {
                 <FontAwesomeIcon icon={faUserGear} />
               </Link>
               <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
-                <li><a className="dropdown-item" href="#">使用者</a></li>
-                <li><a className="dropdown-item" href="#">修改密碼</a></li>
-                <li><a className="dropdown-item" href="#">Line會員</a></li>
-                <li><a className="dropdown-item" href="#">聯絡我們</a></li>
-                <li><a className="dropdown-item" href="#">登出</a></li>
+                <li><Link to="#" className="dropdown-item">使用者</Link></li>
+                <li><Link to="#" className="dropdown-item">修改密碼</Link></li>
+                <li><Link to="#" className="dropdown-item">Line會員</Link></li>
+                <li><Link to="#" className="dropdown-item">聯絡我們</Link></li>
+                <li><Link to="/login" className="dropdown-item">登出</Link></li>
               </ul>
             </div>
           </div>
