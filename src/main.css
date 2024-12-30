@@ -4,3 +4,8 @@ body {
   padding: 0;
   min-height: 100vh;
 }
+
+button.btn.btn-primary  {
+  background-color: #05356c;
+  border: 0;
+}
