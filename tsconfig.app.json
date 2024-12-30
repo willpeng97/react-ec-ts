@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "allowJs": true, // 允許 TypeScript 專案中引用 JavaScript 檔案
+    "checkJs": false, // 不檢查 JavaScript 檔案的型別錯誤
     "incremental": true, // 啟用增量編譯
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "target": "ES2020",

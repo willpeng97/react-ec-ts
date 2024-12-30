@@ -1,14 +1,17 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
 import { Modal, Button } from "react-bootstrap";
+import { userLogin } from '../api/weyu_api';
+
 
 export const LoginForm = () => {
   // 登入按鈕
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const handleLoginClick = () => {
-    navigate('/');
+    userLogin()
+    // navigate('/');
   };
   // 彈出視窗
   const [activeModal, setActiveModal] = useState<string | null>(null);
