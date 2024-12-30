@@ -28,7 +28,7 @@ export const Navbar = () => {
             </Link>
 
             {/* 上一頁 */}
-            <Link to="javascript:history.back()" className={`${styles.navbarItem} ${styles.seperation}`}>
+            <Link to="/" className={`${styles.navbarItem} ${styles.seperation}`}>
               <FontAwesomeIcon icon={faCircleChevronLeft} className="me-1" />
               上一頁
             </Link>

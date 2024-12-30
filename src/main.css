@@ -9,4 +9,7 @@ body {
 button.btn.btn-primary  {
   background-color: #05356c;
   border: 0;
+  &:hover{
+    background-color: #0e4a8f;
+  }
 }
