@@ -11,7 +11,7 @@ interface Props {
 export const Home: FC<Props> = ({tiles}) => {
   return (
     <div className="container">
-      <div id="menu" className="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 g-4 text-light py-5">
+      <div id="menu" className="row row-cols-2 row-cols-lg-4 g-2 text-light py-2">
         {tiles.map((tile) => (
           <MenuTile {...tile}/>
         ))}

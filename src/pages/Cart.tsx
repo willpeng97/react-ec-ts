@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { Table, Button, Form } from "react-bootstrap";
 
 // 購物車商品介面
@@ -8,7 +9,7 @@ export interface CartItem {
   unitWeight: number; // 每包裝重量 (公斤)
 }
 
-export const Cart: React.FC<{ cart: CartItem[]; updateCart: (updatedCart: CartItem[]) => void }> = ({
+export const Cart: FC<{ cart: CartItem[]; updateCart: (updatedCart: CartItem[]) => void }> = ({
   cart,
   updateCart,
 }) => {

@@ -164,7 +164,7 @@ export const Products: React.FC = () => {
         </thead>
         <tbody>
         {currentProducts.length > 0 ? (
-            filteredProducts.map((product) => (
+            currentProducts.map((product) => (
               <tr key={product.id}>
                 <td>{product.id}</td>
                 <td>{product.name}</td>
