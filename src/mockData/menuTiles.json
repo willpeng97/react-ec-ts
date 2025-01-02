@@ -1,19 +1,19 @@
 [
   {
     "label": "商品一覽",
-    "link": "/products",
+    "link": "products",
     "image": "btnGoods.svg",
     "fnKey": "342975302766084"
   },
   {
     "label": "訂單查詢",
-    "link": "/zz_query/orderQuery",
+    "link": "Cart",
     "image": "btnGoods.svg",
     "fnKey": "362922892413760"
   },
   {
     "label": "EC訂單",
-    "link": "/zz_query/orderMaintain",
+    "link": "Profile",
     "image": "btnGoods.svg",
     "fnKey": "362923018316488"
   }

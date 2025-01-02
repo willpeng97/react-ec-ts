@@ -8,10 +8,8 @@ import { userLogin } from '../api/weyu_api';
 
 export const LoginForm = () => {
   // 登入按鈕
-  // const navigate = useNavigate();
   const handleLoginClick = () => {
     userLogin()
-    // navigate('/');
   };
   // 彈出視窗
   const [activeModal, setActiveModal] = useState<string | null>(null);

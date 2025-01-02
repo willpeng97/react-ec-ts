@@ -21,8 +21,9 @@ export const App = () => {
 
 // 判斷是否為登入頁
 const ConditionalLayout = () => {
+  const base = import.meta.env.BASE_URL
   const location = useLocation();
-  const isLoginPage = location.pathname === "/login";
+  const isLoginPage = location.pathname === `${base}login`;
 
   if (isLoginPage) {
     return <LoginForm />;
@@ -37,10 +38,10 @@ const ConditionalLayout = () => {
       {/* 分頁內容 */}
       <main style={{ padding: '20px' }}>
         <Routes>
-          <Route path={`${import.meta.env.BASE_URL}/`} element={<Home tiles={tiles} />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path={`${base}`} element={<Home tiles={tiles} />} />
+          <Route path={`${base}Products`} element={<Products />} />
+          <Route path={`${base}Cart`} element={<Cart />} />
+          <Route path={`${base}Profile`} element={<Profile />} />
           <Route path="*" element={<h1>404 - 頁面不存在</h1>} />
         </Routes>
       </main>

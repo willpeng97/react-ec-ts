@@ -9,10 +9,11 @@ export interface Props {
 
 export const MenuTile: FC<Props> = ({ image, label, link }) => {
   const [hovered, setHovered] = useState(false);
+  const base = import.meta.env.BASE_URL
 
   return (
     <div className="col p-3">
-      <a href={link} className="text-decoration-none">
+      <a href={base + link} className="text-decoration-none">
         <div
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
@@ -28,7 +29,7 @@ export const MenuTile: FC<Props> = ({ image, label, link }) => {
         >
           <div className="text-light text-decoration-none text-center d-block">
             <img
-              src={import.meta.env.BASE_URL + image}
+              src={base + image}
               style={{
                 maxWidth: "95%",
                 maxHeight: "10rem",

@@ -10,6 +10,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const Navbar = () => {
+  const base = import.meta.env.BASE_URL
   return (
     <nav id={styles.navMain}>
       <div className="container-fluid">
@@ -17,18 +18,18 @@ export const Navbar = () => {
           {/* 左側 */}
           <div className="col-lg-5 col-md-6 d-flex align-items-center order-0 order-lg-0">
             {/* 公司 Icon */}
-            <Link to="/" className={`${styles.navbarBrand} d-flex align-items-center`}>
-              <h1 className="fs-4 m-0 p-0"><img src={`${import.meta.env.BASE_URL}brand.png`} alt="Brand of JINTEX" /></h1>
+            <Link to={base} className={`${styles.navbarBrand} d-flex align-items-center`}>
+              <h1 className="fs-4 m-0 p-0"><img src={`${base}brand.png`} alt="Brand of JINTEX" /></h1>
             </Link>
 
             {/* 返回首頁 */}
-            <Link to="/" className={styles.navbarItem}>
+            <Link to={base} className={styles.navbarItem}>
               <FontAwesomeIcon icon={faHome} className="me-1" />
               首頁
             </Link>
 
             {/* 上一頁 */}
-            <Link to="/" className={`${styles.navbarItem} ${styles.seperation}`}>
+            <Link to={base} className={`${styles.navbarItem} ${styles.seperation}`}>
               <FontAwesomeIcon icon={faCircleChevronLeft} className="me-1" />
               上一頁
             </Link>
@@ -66,7 +67,7 @@ export const Navbar = () => {
                 <li><Link to="#" className="dropdown-item">修改密碼</Link></li>
                 <li><Link to="#" className="dropdown-item">Line會員</Link></li>
                 <li><Link to="#" className="dropdown-item">聯絡我們</Link></li>
-                <li><Link to="/login" className="dropdown-item">登出</Link></li>
+                <li><Link to={`${base}login`} className="dropdown-item">登出</Link></li>
               </ul>
             </div>
           </div>
