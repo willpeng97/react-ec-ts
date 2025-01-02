@@ -1,3 +1,8 @@
+:root {
+  --theme-color: #05356c;
+  --theme-color-hover: #0e4a8f;
+}
+
 body {
   box-sizing: border-box;
   margin: 0;
@@ -7,9 +12,15 @@ body {
 
 /* 覆蓋Bootstrap預設樣式 */
 button.btn.btn-primary  {
-  background-color: #05356c;
+  background-color: var(--theme-color);
   border: 0;
   &:hover{
-    background-color: #0e4a8f;
+    background-color: var(--theme-color-hover);
   }
+}
+
+.page-item.active .page-link {
+  background-color: var(--theme-color);
+  border-color: var(--theme-color);
+  color: white !important; /* 更改文字顏色 */
 }
