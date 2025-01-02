@@ -52,7 +52,7 @@ export const Navbar = () => {
             </Link>
 
             {/* 購物車 */}
-            <Link to="/cart.html" className={`${styles.navbarItem} ${styles.seperation}`}>
+            <Link to={base + 'cart'} className={`${styles.navbarItem} ${styles.seperation}`}>
               <FontAwesomeIcon icon={faShoppingCart} className="me-1" />
               購物車
             </Link>

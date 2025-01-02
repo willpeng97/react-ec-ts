@@ -43,7 +43,7 @@ export const Products: React.FC = () => {
       { id: 6, name: "Product F", category: "裕展", description: "Description F", unitWeight: 200 },
     ];
     const mockCategories = [
-      { label:'全部', value:'All' },
+      { label:'選擇公司', value:'All' },
       { label:'獻麒-總公司', value:'獻麒' },
       { label:'和群纖維-總公司', value:'和群纖維' },
       { label:'裕展-總公司', value:'裕展' },
@@ -125,7 +125,7 @@ export const Products: React.FC = () => {
             <InputGroup.Text><FontAwesomeIcon icon={faMagnifyingGlass} /></InputGroup.Text>
           </InputGroup>
         </div>
-        <div className="col-lg-3 mb-3">
+        <div className="col-lg-2 mb-3">
           <Form.Select
             value={selectedCategory}
             onChange={e => setSelectedCategory(e.target.value)}
@@ -137,7 +137,7 @@ export const Products: React.FC = () => {
             ))}
           </Form.Select>
         </div>
-        <div className="col-lg-4 mb-3">
+        <div className="col-lg-5 mb-3">
           <h5 style={{lineHeight: "2.5rem"}}>
             <strong>送貨地址: </strong>
             <span id="address">彰化縣伸港鄉溪底村(全興工業區)工八路9號(附品檢單)</span>

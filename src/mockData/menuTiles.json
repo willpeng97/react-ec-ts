@@ -7,13 +7,13 @@
   },
   {
     "label": "訂單查詢",
-    "link": "Cart",
+    "link": "cart",
     "image": "btnGoods.svg",
     "fnKey": "362922892413760"
   },
   {
     "label": "EC訂單",
-    "link": "Profile",
+    "link": "profile",
     "image": "btnGoods.svg",
     "fnKey": "362923018316488"
   }
