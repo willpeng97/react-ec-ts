@@ -28,7 +28,7 @@ export const MenuTile: FC<Props> = ({ image, label, link }) => {
         >
           <div className="text-light text-decoration-none text-center d-block">
             <img
-              src={image}
+              src={import.meta.env.BASE_URL + image}
               style={{
                 maxWidth: "95%",
                 maxHeight: "10rem",

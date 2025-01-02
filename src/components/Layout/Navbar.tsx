@@ -18,7 +18,7 @@ export const Navbar = () => {
           <div className="col-lg-5 col-md-6 d-flex align-items-center order-0 order-lg-0">
             {/* 公司 Icon */}
             <Link to="/" className={`${styles.navbarBrand} d-flex align-items-center`}>
-              <h1 className="fs-4 m-0 p-0"><img src="/brand.png" alt="Brand of JINTEX" /></h1>
+              <h1 className="fs-4 m-0 p-0"><img src={`${import.meta.env.BASE_URL}brand.png`} alt="Brand of JINTEX" /></h1>
             </Link>
 
             {/* 返回首頁 */}

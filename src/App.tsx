@@ -37,7 +37,7 @@ const ConditionalLayout = () => {
       {/* 分頁內容 */}
       <main style={{ padding: '20px' }}>
         <Routes>
-          <Route path="/" element={<Home tiles={tiles} />} />
+          <Route path={`${import.meta.env.BASE_URL}/`} element={<Home tiles={tiles} />} />
           <Route path="/products" element={<Products />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/profile" element={<Profile />} />

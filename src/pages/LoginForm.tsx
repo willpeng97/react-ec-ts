@@ -23,7 +23,7 @@ export const LoginForm = () => {
   return (
     <div
       style={{
-        backgroundImage: `url('/banner.jpg')`,
+        backgroundImage: `url(${import.meta.env.BASE_URL}banner.jpg)`,
         backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'fixed',
         backgroundPosition: 'center',
@@ -39,7 +39,7 @@ export const LoginForm = () => {
               className="p-3 border border-info border-opacity-10 rounded-3 bg-info bg-opacity-10 text-dark-emphasis"
             >
               <div id="brand" className="form-floating text-center">
-                <img src='/brand.png' className="m-4 h-auto" style={{width:"250px"}} alt="Brand of JINTEX" />
+                <img src={`${import.meta.env.BASE_URL}brand.png`} className="m-4 h-auto" style={{width:"250px"}} alt="Brand of JINTEX" />
               </div>
               <div className="text-center text-light mb-3">電子下單平台</div>
               <div className="form-floating mb-3">
