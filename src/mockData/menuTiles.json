@@ -13,13 +13,13 @@
   },
   {
     "label": "EC訂單",
-    "link": "profile",
+    "link": "Tabs",
     "image": "btnGoods.svg",
     "fnKey": "362923018316488"
   },
   {
     "label": "ERP訂單",
-    "link": "",
+    "link": "EnhancedTable",
     "image": "btnGoods.svg",
     "fnKey":"362923040996286"
   },

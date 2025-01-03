@@ -6,10 +6,11 @@ import { Footer } from './components/Layout/Footer';
 import { Home } from './pages/Home';
 import { Products } from './pages/Products';
 import { Cart, CartItem } from './pages/Cart';
-import { Profile } from './pages/Profile';
 import { LoginForm } from './pages/LoginForm';
+import { EnhancedTable } from './pages/EnhancedTable';
 import tiles from './mockData/menuTiles.json'
 import { useState } from 'react';
+import { BasicTabs as Tabs } from './pages/Tabs';
 
 // 傳遞購物車狀態
 
@@ -56,8 +57,9 @@ const ConditionalLayout = ({
           <Route path={`${base}`} element={<Home tiles={tiles} />} />
           <Route path={`${base}products`} element={<Products />} />
           <Route path={`${base}cart`} element={ <Cart cart={cart} updateCart={updateCart} />} />
-          <Route path={`${base}profile`} element={<Profile />} />
-          <Route path="*" element={<h1>404 - 頁面不存在</h1>} />
+          <Route path={`${base}EnhancedTable`} element={<EnhancedTable />} />
+          <Route path={`${base}Tabs`} element={<Tabs />} />
+          <Route path={`${base}*`} element={<h1>404 - 頁面不存在</h1>} />
         </Routes>
       </main>
 
