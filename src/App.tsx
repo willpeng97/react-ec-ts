@@ -1,14 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { config } from './config/weyu_config';
 import { Navbar } from './components/Layout/Navbar';
 import { Footer } from './components/Layout/Footer';
-
 // 引入頁面組件
 import { Home } from './pages/Home';
 import { Products } from './pages/Products';
 import { Cart, CartItem } from './pages/Cart';
 import { LoginForm } from './pages/LoginForm';
 import { EnhancedTable } from './pages/EnhancedTable';
-import tiles from './mockData/menuTiles.json'
+import tiles from './assets/menuTiles.json'
 import { useState } from 'react';
 import { BasicTabs as Tabs } from './pages/Tabs';
 
@@ -24,7 +24,7 @@ export const App = () => {
 
   return (
     <Router>
-       <ConditionalLayout cart={cart} updateCart={updateCart} />
+      <ConditionalLayout cart={cart} updateCart={updateCart} />
     </Router>
   );
 };
@@ -39,7 +39,7 @@ const ConditionalLayout = ({
   }) => {
 
   const base = import.meta.env.BASE_URL;
-  const isLogin = localStorage.getItem("isLogin")
+  const isLogin = localStorage.getItem(config.PROJECT_SAVE_NAME + "_BI_isLogin")
 
   if (!isLogin) {
     return <LoginForm />;

@@ -1,3 +1,5 @@
+import { config } from '../../config/weyu_config';
+
 import styles from './Navbar.module.css';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -14,7 +16,13 @@ export const Navbar = () => {
 
   // 登出按鈕
   const handleLogoutClick = () => {
-    localStorage.removeItem("isLogin")
+    const keyword = config.PROJECT_SAVE_NAME;
+    // 遍歷所有 localStorage 的鍵
+    Object.keys(localStorage).forEach((key) => {
+      if (key.includes(keyword)) {
+        localStorage.removeItem(key); // 刪除符合條件的項目
+      }
+    });
     window.location.href = base;
   };
 
