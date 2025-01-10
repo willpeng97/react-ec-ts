@@ -7,15 +7,25 @@ import { userLogin } from '../api/weyu_api';
 
 
 export const LoginForm = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
   // 登入按鈕
   const handleLoginClick = () => {
-    userLogin()
+    userLogin(username, password)
   };
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      userLogin(username, password)
+    }
+  };
+
   // 彈出視窗
   const [activeModal, setActiveModal] = useState<string | null>(null);
 
   const handleShow = (modalName: string) => setActiveModal(modalName);
   const handleClose = () => setActiveModal(null);
+
 
 
   return (
@@ -43,8 +53,9 @@ export const LoginForm = () => {
               <div className="form-floating mb-3">
                 <input
                   className="form-control"
-                  id="id"
                   placeholder=""
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
                 />
                 <label htmlFor="id">Account</label>
               </div>
@@ -52,8 +63,10 @@ export const LoginForm = () => {
                 <input
                   type="password"
                   className="form-control"
-                  id="pw"
                   placeholder=""
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  onKeyDown={handleKeyDown}
                 />
                 <label htmlFor="pw">Password</label>
                 <div

@@ -1,33 +1,32 @@
-import { config } from '../config/weyu_config';
-const base = import.meta.env.BASE_URL
+import { config } from "../config/weyu_config";
+const base = import.meta.env.BASE_URL;
 
 // 登錄 API
-export const userLogin = () => {
+export const userLogin = (username, password) => {
   const body = {
-      UID: "ADMINV2",
-      PWD: "ADMINV2"
+    UID: username,
+    PWD: password,
   };
-  const fetchURL = `${window.location.protocol}//${config.default_ip}/${config.default_Api_Name}/api/WeyuLogin`
+  const fetchURL = `${window.location.protocol}//${config.default_ip}/${config.default_Api_Name}/api/WeyuLogin`;
 
   fetch(fetchURL, {
-      method: 'POST',
-      headers: {
-          'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(body)
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body),
   })
-  .then(response => response.json())
-  .then(data => {
+    .then((response) => response.json())
+    .then((data) => {
       if (data.result) {
-          alert("登入成功");
-          window.location.href = base
+        localStorage.setItem("isLogin", "true");
+        window.location.href = base;
       } else {
-          alert(`${window.location.protocol}//${config.default_ip}/${config.default_Api_Name}/api/WeyuLogin`)
+        alert("登入失敗");
       }
-  })
-  .catch(error => {
-      console.error('Error:', error);
-      alert(`${window.location.protocol}//${config.default_ip}/${config.default_Api_Name}/api/WeyuLogin`)
-      alert('登入失敗');
-  });
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      alert("登入失敗");
+    });
 };

@@ -11,6 +11,13 @@ import {
 
 export const Navbar = () => {
   const base = import.meta.env.BASE_URL
+
+  // 登出按鈕
+  const handleLogoutClick = () => {
+    localStorage.removeItem("isLogin")
+    window.location.href = base;
+  };
+
   return (
     <nav id={styles.navMain}>
       <div className="container-fluid">
@@ -67,7 +74,7 @@ export const Navbar = () => {
                 <li><Link to="#" className="dropdown-item">修改密碼</Link></li>
                 <li><Link to="#" className="dropdown-item">Line會員</Link></li>
                 <li><Link to="#" className="dropdown-item">聯絡我們</Link></li>
-                <li><Link to={`${base}login`} className="dropdown-item">登出</Link></li>
+                <li><Link to="#" className="dropdown-item" onClick={handleLogoutClick}>登出</Link></li>
               </ul>
             </div>
           </div>

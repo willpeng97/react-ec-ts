@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Layout/Navbar';
 import { Footer } from './components/Layout/Footer';
 
@@ -39,10 +39,9 @@ const ConditionalLayout = ({
   }) => {
 
   const base = import.meta.env.BASE_URL;
-  const location = useLocation();
-  const isLoginPage = location.pathname === `${base}login`;
+  const isLogin = localStorage.getItem("isLogin")
 
-  if (isLoginPage) {
+  if (!isLogin) {
     return <LoginForm />;
   }
   // 非登入頁
