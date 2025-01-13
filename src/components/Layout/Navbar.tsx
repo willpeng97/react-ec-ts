@@ -78,10 +78,11 @@ export const Navbar = () => {
                 <FontAwesomeIcon icon={faUserGear} />
               </Link>
               <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
-                <li><Link to="#" className="dropdown-item">使用者</Link></li>
+                <li><Link to="#" className="dropdown-item">{localStorage.getItem(config.PROJECT_SAVE_NAME+"_BI_userName")}</Link></li>
                 <li><Link to="#" className="dropdown-item">修改密碼</Link></li>
                 <li><Link to="#" className="dropdown-item">Line會員</Link></li>
                 <li><Link to="#" className="dropdown-item">聯絡我們</Link></li>
+                <li><Link to="#" className="dropdown-item">操作說明</Link></li>
                 <li><Link to="#" className="dropdown-item" onClick={handleLogoutClick}>登出</Link></li>
               </ul>
             </div>

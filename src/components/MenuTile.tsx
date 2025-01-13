@@ -39,7 +39,7 @@ export const MenuTile: FC<Props> = ({ image, label, link }) => {
             />
           </div>
           <h3
-            className="text-center"
+            className="text-center fw-lig ht"
             style={{
               color: hovered ? "white" : "#05356C",
               transition: "color 0.3s ease"
